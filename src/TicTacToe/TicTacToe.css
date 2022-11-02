@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script:wght@700&family=Fredoka+One&family=Fuzzy+Bubbles:wght@700&family=Gloria+Hallelujah&family=Indie+Flower&family=Shadows+Into+Light&display=swap");
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+
+.container {
+    display: grid;
+    grid-template-rows: 80px 158px 135px 50px 1fr;
+    grid-template-columns: 1.5fr 300px 200px 1.5fr;
+    row-gap: 30px;
+    column-gap: 20px;
+    box-sizing: border-box;
+}
+
+p {
+    margin: auto;
+    grid-area: 3/1/4/5;
+    font-size: 100px;
+    font-family: Caveat;
+    justify-self: center;
+    align-self: center;
+    color: rgb(0, 247, 255);
+    text-shadow: 4px 4px 6px rgba(8, 8, 8, 1);
+}
+
+.draw {
+    margin-left: 27%;
+}
+
+p strong {
+    color: rgb(8, 8, 8);
+    font-size: 120px;
+    text-shadow: 4px 4px 6px rgba(101, 213, 241, 1);
+}
+
+h3 {
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+    grid-row: 1;
+    grid-column: 2;
+    font-size: 50px;
+    font-family: Caveat;
+    text-shadow: 3px 3px 3px rgba(8, 8, 8, 0.85);
+}
+
+table {
+    margin: auto;
+    grid-area: 2/2/4/3;
+    width: 300px;
+    height: 300px;
+}
+
+td {
+    text-align: center;
+    color: rgb(219, 250, 229);
+    background-color: rgb(35, 7, 82);
+    font-family: "Indie Flower", cursive;
+    font-size: 70px;
+    height: 100px;
+    width: 33%;
+}
+
+.newGame {
+    grid-area: 4/2/5/3;
+    font-size: 1.5rem;
+    font-family: Fredoka One;
+    color: rgb(219, 250, 229);
+    background-color: rgb(94, 1, 182);
+    border-radius: 15px;
+    border: none;
+    box-shadow: 3px 3px 3px rgba(8, 8, 8, 0.85);
+    margin: auto;
+    padding: 10px 60px;
+    }
+
+.players {
+    grid-area: 2/ 3;
+    margin: auto;
+    
+    
+}
+
+input {
+    margin: 0;
+    display: block;
+    height: 40px;
+    margin: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(35, 7, 82, 0.7);
+    background-color: rgb(241, 233, 255);
+    color: rgba(35, 7, 82, 0.7);
+}
+
+input::placeholder {
+    color:indigo;
+}
+
+.submit {
+    padding: 5px 30px;
+    display:block;
+    border-radius: 15px;
+    border: 1px solid rgba(35, 7, 82, 0.7);
+    background-color: rgb(94, 1, 182);
+    color: rgb(219, 250, 229);
+    font-size: 25px;
+    font-family: Caveat;
+    text-align: center;
+    
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p {
+        font-size: 70px;
+        position: fixed;
+        margin-top: 50%;
+        text-align-last: center;
+    }
+
+    p strong {
+        font-size: 70px;
+        color: rgb(0, 0, 0);
+   }
+
+    .players {
+        margin-left: 20px;
+    }
+
+    @media screen and (max-height: 700px) and (max-width: 400px) {
+        .container{
+            margin-left: 0%;
+            transform: scale(0.8);
+            row-gap: 10px;
+        }
+        .players {
+            margin-left: 10px;
+        }
+    }
+}
